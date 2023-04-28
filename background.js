@@ -14,6 +14,6 @@ chrome.browserAction.onClicked.addListener(
     request.open("PUT", 'http://localhost:8080/');
     request.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
     // request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    request.send(JSON.stringify({url: tab.url, title: tab.title}));
+    request.send(JSON.stringify({url: tab.url, title: tab.title, folder:"foldername"}));
     // request.send("url="+tab.url+"&title="+tab.title);
   });
