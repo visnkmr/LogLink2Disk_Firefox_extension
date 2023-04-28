@@ -8,27 +8,32 @@
   <div id="container">
     <label for="input">URLs & Titles of Tabs:</label>
         <textarea id="input" rows="8" cols="40" placeholder="Enter some text here"></textarea>
-    <label for="toggle">all tabs</label>
-        <input type="checkbox" id="toggle">
-    <label for="left">left tabs</label>
-        <input type="checkbox" id="left">
-    <label for="right">right tabs</label>
-        <input type="checkbox" id="right">
-    <label for="selected">selected tabs</label>
-        <input type="checkbox" id="selected">
-    <br/>
-    <br/>
-    <label for="url">URL of server running savetodisk:</label>
-        <textarea id="url" rows="2" cols="40">http://127.0.0.1:8080</textarea>
-    <br/>
-    <br/>
-    <label for="folder">Folder to save to:</label>
-        <textarea id="folder" rows="2" cols="40"></textarea>
-    <br/>
-    <br/>
+    <div id="tabstoselect">
+
+      <label for="toggle">all tabs</label>
+          <input type="checkbox" id="toggle">
+      <label for="left">left tabs</label>
+          <input type="checkbox" id="left">
+      <label for="right">right tabs</label>
+          <input type="checkbox" id="right">
+      <label for="selected">selected tabs</label>
+          <input type="checkbox" id="selected">
+    </div>
+    <div id="serverurl">
+
+      <label for="url">URL of server running savetodisk:</label>
+          <textarea id="url" rows="2" cols="40">http://127.0.0.1:8080</textarea>
+    </div>
+    <div id="foldername">
+
+      <label for="folder">Folder to save to:</label>
+          <textarea id="folder" rows="2" cols="40"></textarea>
+    </div>
     <button id="submit">LogLinktoDisk</button>
-    <br/>
-    <textarea readonly rows="8" cols="40" id="saved"></textarea>
+    <div id="response">
+
+      <textarea readonly rows="8" cols="40" id="saved"></textarea>
+    </div>
   </div>
   <script src="popup.js"></script>
 </body>
