@@ -1,10 +1,14 @@
 const path = require('path');
 
 module.exports = {
-  entry: './background.ts', // the file with import statement
+  entry: {
+      background:'./background.ts',
+      popup:'./popup.ts' // the file with import statement
+    },
+    
   output: {
-    filename: 'bundle.js', // the output file that can be loaded by the browser
-    // path: path.resolve(__dirname, 'dist'), // the output directory
+    filename: '[name].js', // the output file that can be loaded by the browser
+    path: path.resolve(__dirname, 'dist'), // the output directory
   },
   module: {
     rules: [
