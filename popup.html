@@ -1,83 +1,39 @@
 <html>
 <head>
   <style>
-#container {
-   display: flex; 
-   flex-direction: column; 
-   align-items: left; 
-  }
-
-label {
-  margin: 5px;
-}
-
-textarea {
-  resize: none;
-}
-
-#input {
-  width: 80%;
-}
-
-#url, #folder {
-  width: 50%;
-}
-
-#saved {
-  width: 80%;
-  /* background-color: lightgray; */
-}
-
-button {
-  margin: 10px;
-  padding: 10px;
-  background-color: green;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#tabstoselect, #serverurl, #foldername, #response {
-  flex-direction: column;
-  align-items: left;
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid black;
-}
+    /* You can add some CSS styles here */
   </style>
 </head>
 <body>
   <div id="container">
     <label for="input">URLs & Titles of Tabs:</label>
         <textarea id="input" rows="8" cols="40" placeholder="Enter some text here"></textarea>
-    <div id="tabstoselect">
-
-      <label for="toggle">all tabs</label>
-          <input type="checkbox" id="toggle">
-      <label for="left">left tabs</label>
-          <input type="checkbox" id="left">
-      <label for="right">right tabs</label>
-          <input type="checkbox" id="right">
-      <label for="selected">selected tabs</label>
-          <input type="checkbox" id="selected">
-    </div>
-    <div id="serverurl">
-
-      <label for="url">URL of server running savetodisk:</label>
-          <textarea id="url" rows="2" cols="40">http://127.0.0.1:8080</textarea>
-    </div>
-    <div id="foldername">
-
-      <label for="folder">Folder to save to:</label>
-          <textarea id="folder" rows="2" cols="40"></textarea>
-    </div>
+    <label for="toggle">all tabs</label>
+        <input type="checkbox" id="toggle">
+    <label for="left">left tabs</label>
+        <input type="checkbox" id="left">
+    <label for="right">right tabs</label>
+        <input type="checkbox" id="right">
+    <label for="selected">selected tabs</label>
+        <input type="checkbox" id="selected">
+    <br/>
+    <br/>
+    <label for="url">Username to save to:</label>
+        <textarea id="url" rows="2" cols="40">try</textarea>
+    <br/>
+    <br/>
+    <label for="folder">Session Name:</label>
+        <textarea id="folder" rows="2" cols="40"></textarea>
+      <label for="time">time</label>
+        <input type="checkbox" id="time">
+      <label for="browser">chrome</label>
+        <input type="checkbox" id="browser">
+    <br/>
+    <br/>
     <button id="submit">LogLinktoDisk</button>
-    <div id="response">
-
-      <textarea readonly rows="8" cols="40" id="saved"></textarea>
-    </div>
+    <br/>
+    <textarea readonly rows="8" cols="40" id="saved"></textarea>
   </div>
-  <script src="popup.js"></script>
+  <script src="dist/popup.js"></script>
 </body>
 </html>
